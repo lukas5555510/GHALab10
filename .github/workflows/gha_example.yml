@@ -5,7 +5,7 @@ name: gha_example:GitHub Action exercise
 on:
   workflow_dispatch:
 #  push:
-#    branches: [ main ]
+#    branches: [ master ]
 
 jobs:
   build:
@@ -26,8 +26,8 @@ jobs:
       - name: Login to DockerHub
         uses: #############################
         with:
-          username: ${{secrets.DOCKERHUB_USERNAME}}
-          password: ${{secrets.DOCKERHUB_TOKEN}}
+          username: ${{secrets.DOCKER_HUB_USERNAME}}
+          password: ${{secrets.DOCKER_HUB_TOKEN}}
 
       # Budowa obrazu dla dwóch architektur sprzętowych 
       # oraz przesłanie do własnego repo na Dockerhub
